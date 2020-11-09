@@ -18,7 +18,9 @@
 
   <!-- header -->
   <header class="header">
-    <h1 class="h1">Portfolio</h1>
+    <a href="index.html" class="not__decoration">
+      <h1 class="h1__title">Portfolio</h1>
+    </a>
     <ul>
       <li>HOME</li>
       <li>ABOUT</li>
@@ -31,16 +33,34 @@
   <!-- container -->
   <div class="container">
     <!-- main -->
-    <div class="main">
-      <article class="contents">
-
-      </article>
-      <article class="contents">
-        
-      </article>
-    <div>
-
+    <div class="main__various">
+      <div class="contents__various"></div>
+      <h2>じゃんけんゲーム</h2>
+      <div class="contents__eyecatch"><img src="img/rps-eyecatching.png" alt="" width="840px" height="445px"></div>
+      <div class="main__text">
+        <p>
+          ここではじゃんけんゲームができます。
+        </p>
+        <div class="rps_part">
+          <div class="my_hand center">
+            <div class="hand_img"></div>
+          </div>
+          <div class="cpu_hand center">
+            <div class="cpu_kekka"></div>
+          </div>
+        </div>
+        <div class="rps_part_2">
+          <div class="my_hand_btn">
+            <button class="rock" value="0">グー</button>
+            <button class="scissors" value="1">チョキ</button>
+            <button class="paper" value="2">パー</button>
+          </div>
+          <div class="cpu_text center">
+            <p>CPU</p>
+          </div>
+        </div>
       </div>
+      <p class="kekka center"></p>
     </div>
     <!-- main -->
     <!-- side -->

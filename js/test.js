@@ -1,39 +1,63 @@
-// jsを記述する際はここに記載していく
-console.log("はじめてのジャバスクリプト");
-console.log(23 +5);
-console.log(2000 -1800);
-console.log("18+5");
-
-var name = "Yuya Fukuda";
-console.log(name);
-
-var point = 90;
-if(point >= 80){
-    console.log("素晴らしい！おめでとう！");
-}else{
-    console.log("もっと頑張りましょう");
-}
+// jsを記述する際はここに記載してい
+var rps_kekka;
 
 $(function () {
     // この中に書いていく
-    $(".button").on("click", function(){
-
-        var random = Math.floor(Math.random() * 5);
-        if(random == 0){
-            console.log("凶" + random);
-            $(".kekka").html("凶");
-        }else if(random == 1){
-            console.log("吉"+ random);
-            $(".kekka").html("吉");
-        }else if(random == 2){
-            console.log("小吉"+ random);
-            $(".kekka").html("小吉");
-        }else if(random == 3){
-            console.log("中吉"+ random);
-            $(".kekka").html("中吉");
-        }else{
-            console.log("大吉"+ random);
-            $(".kekka").html("大吉");
+    $(".rock").on("click", function(){
+        var btn_rps = $(".rock").val();
+        var random = Math.floor(Math.random() * 3);
+        rps_kekka = btn_rps - random;
+        $(".hand_img").html('<img src="img/my_rock.png" width="300px" height="300px">');
+        if(rps_kekka == 0){
+            console.log("引き分け"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_rock.png" width="300px" height="300px">');
+            $(".kekka").html("引き分けです。");
+        }else if(rps_kekka == -1){
+            console.log("勝ち"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_scissors.png" width="300px" height="300px">');
+            $(".kekka").html("あなたの勝ちです。");
+        }else if(rps_kekka == -2){
+            console.log("負け"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_paper.png" width="300px" height="300px">');
+            $(".kekka").html("あなたの負けです。");
+        }
+    });
+    $(".scissors").on("click", function(){
+        var btn_rps = $(".scissors").val();
+        var random = Math.floor(Math.random() * 3);
+        rps_kekka = btn_rps - random;
+        $(".hand_img").html('<img src="img/my_scissors.png" width="300px" height="300px">');
+        if(rps_kekka == 0){
+            console.log("引き分け"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_scissors.png" width="300px" height="300px">');
+            $(".kekka").html("引き分けです。");
+        }else if(rps_kekka == 1){
+            console.log("負け"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_rock.png" width="300px" height="300px">');
+            $(".kekka").html("あなたの負けです。");
+        }else if(rps_kekka == -1){
+            console.log("勝ち"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_paper.png" width="300px" height="300px">');
+            $(".kekka").html("あなたの勝ちです。");
+        }
+    });
+    $(".paper").on("click", function(){
+        var btn_rps = $(".paper").val();
+        var random = Math.floor(Math.random() * 3);
+        rps_kekka = btn_rps - random;
+        $(".hand_img").html('<img src="img/my_paper.png" width="300px" height="300px">');
+        if(rps_kekka == 0){
+            console.log("引き分け"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_paper.png" width="300px" height="300px">');
+            $(".kekka").html("引き分けです。");
+        }else if(rps_kekka == 1){
+            console.log("負け"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_scissors.png" width="300px" height="300px">');
+            $(".kekka").html("あなたの負けです。");
+        }else if(rps_kekka == 2){
+            console.log("勝ち"+ rps_kekka);
+            $(".cpu_kekka").html('<img src="img/cpu_rock.png" width="300px" height="300px">');
+            $(".kekka").html("あなたの勝ちです。");
         }
     });
 
